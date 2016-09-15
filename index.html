@@ -47,7 +47,7 @@
             </div>
         </section>
         <section>
-            <h2>
+            <h2 class="outcomes-expander">
                 Czego się nauczysz podczas szkolenia? (wersja długa)
             </h2>
             <ul class="learning-outcomes">
@@ -128,8 +128,9 @@
         <section>
             <h2>Trener</h2>
 
-            <div class="trainer">Mateusz Kwaśniewski (<a href="https://www.linkedin.com/in/mateusz-kwasniewski-583a976">LinkedIn</a>, <a
-                    href="https://twitter.com/kwasniew">Twitter</a>, <a href="http://www.slideshare.net/kwasniew/">Slideshare</a>,
+            <div class="trainer">Mateusz Kwaśniewski (<a href="https://www.linkedin.com/in/mateusz-kwasniewski-583a976">LinkedIn</a>,
+                <a
+                        href="https://twitter.com/kwasniew">Twitter</a>, <a href="http://www.slideshare.net/kwasniew/">Slideshare</a>,
                 <a href="https://github.com/kwasniew">Github</a>)
             </div>
 
@@ -150,17 +151,43 @@
     </div>
 </div>
 <script>
-    document.querySelectorAll(".learning-outcomes li").forEach(function (learningOutcome) {
+    var $learningOutcomes = document.querySelectorAll(".learning-outcomes li");
+    var learningOutcomesLength = document.querySelectorAll(".learning-outcomes li").length;
+
+    $learningOutcomes.forEach(function (learningOutcome) {
         learningOutcome.addEventListener('click', function () {
             learningOutcome.classList.toggle('hidden');
         });
     });
+
+    document.querySelectorAll(".outcomes-expander").forEach(function (expander) {
+        expander.addEventListener('click', function () {
+            if (learningOutcomesLength > 0) {
+                if ($learningOutcomes[0].classList.contains('hidden')) {
+                    $learningOutcomes.forEach(function (learningOutcome) {
+                        learningOutcome.classList.remove('hidden');
+                    });
+                } else {
+                    $learningOutcomes.forEach(function (learningOutcome) {
+                        learningOutcome.classList.add('hidden');
+                    });
+                }
+            }
+        });
+    });
 </script>
 <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
     ga('create', 'UA-84207845-1', 'auto');
     ga('send', 'pageview');

@@ -116,6 +116,10 @@ img {
     display: none;
 }
 
+.outcomes-expander {
+    cursor: pointer;
+}
+
 .learning-outcomes {
     list-style: none;
     padding-left: 0;

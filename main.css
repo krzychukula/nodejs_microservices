@@ -1,5 +1,5 @@
 body {
-    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     line-height: 1.5;
     color: #333;
 }
@@ -8,7 +8,7 @@ body {
     font-size: 1.2em;
 }
 
-@media screen and (min-width : 1530px) {
+@media screen and (min-width: 1530px) {
     .title {
         font-size: 1.6em;
     }
@@ -54,7 +54,7 @@ img {
     max-width: 90%;
 }
 
-@media screen and (min-width : 1100px) {
+@media screen and (min-width: 1100px) {
     .column-aligner-item {
         max-width: 60%;
     }
@@ -82,7 +82,7 @@ img {
     color: white;
 }
 
-@media screen and (min-width : 700px) {
+@media screen and (min-width: 700px) {
     .contact-link {
         max-width: 30%;
     }
@@ -112,7 +112,7 @@ img {
     box-shadow: 0 8px 6px -6px black;
 }
 
-.hidden .demo{
+.hidden .demo {
     display: none;
 }
 
@@ -147,3 +147,24 @@ img {
 .translation {
     margin-top: 40px;
 }
+
+.trainer {
+    margin-bottom: 20px;
+}
+
+.embed-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.embed-container iframe, .embed-container object, .embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+

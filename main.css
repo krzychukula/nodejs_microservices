@@ -94,9 +94,15 @@ img {
     margin-bottom: 20px;
 }
 
+footer nav {
+    float: left;
+    font-size: 0.6em;
+    margin-bottom: 20px;
+}
+
 .inline-block {
     display: inline-block;
-    padding: 5px;
+    padding: 5px 15px;
 }
 
 .separated {

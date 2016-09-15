@@ -143,3 +143,7 @@ img {
 .learning-outcomes li.hidden:before {
     content: '\25BA';
 }
+
+.translation {
+    margin-top: 40px;
+}

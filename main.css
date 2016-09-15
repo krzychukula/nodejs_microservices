@@ -95,3 +95,32 @@ img {
     margin: 20px;
     box-shadow: 0 8px 6px -6px black;
 }
+
+.hidden .demo{
+    display: none;
+}
+
+.learning-outcomes {
+    list-style: none;
+}
+
+.learning-outcomes li:nth-child(odd) {
+    background-color: #eee;
+}
+
+.learning-outcomes li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.learning-outcomes li.hidden:before {
+    content: '\25BA';
+    color: #8cc84b;
+    margin-right: 10px;
+}
+
+.learning-outcomes li:before {
+    content: '\25BC';
+    color: #8cc84b;
+    margin-right: 10px;
+}
